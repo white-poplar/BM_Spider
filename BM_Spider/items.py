@@ -13,7 +13,7 @@ class BmSpiderItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
-class TitleItem(scrapy.Item):
+class DramaItem(scrapy.Item):
 	title = scrapy.Field()
-	data  = scrapy.Field()
+	img   = scrapy.Field()
 	

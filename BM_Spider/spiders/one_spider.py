@@ -14,9 +14,19 @@ sys.setdefaultencoding( "utf-8" )
 class OneSpider(scrapy.spiders.Spider):
     name = "One"
     # 搜索域名范围
-    allowed_domains = ["http://www.liaoxuefeng.com"]
-    start_urls = ["http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000"]
+    allowed_domains = ["http://www.fixsub.com"]
+    start_urls = ["http://www.fixsub.com/我们的作品?cat=fix日语社"]
 
     def parse(self, response):
-        filename = "a.html"
-        open(filename, 'wb').write(response.body)
+        # filename = "fix_RJ.html"
+        # open(filename, 'wb').write(response.body)
+        
+        for drama in response.xpath('//div[@class="pg-item"]'):
+            
+            print(drama)
+
+            drama_title = drama.xpath('div[@class="pg-details"]/h2/text()').extract()
+            # drama_img = drama.xpath('img[@src]/text()').extract()
+
+            print(drama_title)
+            # print(drama_img)
