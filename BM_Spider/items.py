@@ -16,3 +16,4 @@ class BmSpiderItem(scrapy.Item):
 class TitleItem(scrapy.Item):
 	title = scrapy.Field()
 	data  = scrapy.Field()
+	
