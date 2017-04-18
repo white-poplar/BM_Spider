@@ -14,6 +14,7 @@ class BmSpiderItem(scrapy.Item):
     pass
 
 class DramaItem(scrapy.Item):
-	title = scrapy.Field()
-	img   = scrapy.Field()
-	
+    title = scrapy.Field()
+    img   = scrapy.Field()
+    link  = scrapy.Field()
+    
